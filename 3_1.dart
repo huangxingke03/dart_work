@@ -27,15 +27,24 @@ void main(List<String> args) {
 
   Runes runes = new Runes('\u{1f47b}');
   print(runes);
-  //可选命名参数
-  double getPrice({dynamic bookname_1 = "测试"}) {
-    if (bookname_1 == "测试01") {
-      return 1.0;
-    } else {
-      return 2.0;
-    }
-  }
 
   print(getPrice());
   print(getPrice(bookname_1: "测试01"));
+
+  print(getName());
+  print(getName("王刚"));
+}
+
+//可选命名参数
+getPrice({dynamic bookname_1 = "测试"}) {
+  if (bookname_1 == "测试01") {
+    return "等于,$bookname_1";
+  } else {
+    return "getPrice   null";
+  }
+}
+
+//可选位置参数
+getName([String productName = "黎明"]) {
+  return "$productName,你好";
 }
