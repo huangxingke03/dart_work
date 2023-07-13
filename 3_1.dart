@@ -27,7 +27,7 @@ void main(List<String> args) {
 
   Runes runes = new Runes('\u{1f47b}');
   print(runes);
-
+  //可选命名参数
   double getPrice({dynamic bookname_1 = "测试"}) {
     if (bookname_1 == "测试01") {
       return 1.0;
